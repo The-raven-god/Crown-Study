@@ -21,6 +21,9 @@
   <!-- Nucleo del css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet" />
   <!-- Custom styles for this template -->
@@ -75,106 +78,173 @@
   </div>
   <!-- end hero area -->
 
-
-  <!-- product section -->
-  <section class="product_section layout_padding">
-    <div class="d-flex justify-content-center">
-      <h2 class="custom_heading">
-        Nuestros Profuctos
-      </h2>
+     <!-- CHAT BOT -->
+  <div id="chat-container" class="chat-container">
+    <div id="chat-box" class="chat-box"></div>
+    <div class="chat-input-container">
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button id="send-btn">Enviar</button>
     </div>
-    <div class="container layout_padding2">
-      <div class="img-box box-1">
-        <h3>1.	Juegos casuales para las personas que no pueden emplear mucho tiempo en los juegos</h3>             
-        <img src="images/p-1.jpg" alt="">
-      </div>
-      <div class="img-box box-2">
-        <h3>2.	Juegos con historias inmersivas con narrativas envolventes </h3>     
-        <img src="images/p-2.jpg" alt="">
-      </div>
-      <div class="img-box box-3">
-        <h3>3.	Actualizaciones a juegos antiguos</h3>
-        <img src="images/p-3.jpg" alt="">
-      </div>
-      <div class="img-box box-4">
-        <h3>4.	Servicio de fidelidad</h3>
-        <img src="images/p-4.jpg" alt="">
+    <div id="suggestions" class="suggestions"></div>
+  </div>
+  <button id="open-chat" class="chat-toggle" onclick="toggleChat()">
+    <img src="images/logo.png" alt="Chat" class="chat-logo">
+  </button>
+  <script src="js/script.js"></script>
+  <!-- CHAT BOT -->
+   
+<!-- product section -->
+<section class="product_section py-5" id="productos" style="background-color: #054357; color: white;">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <p>Explora lo que ofrecemos para diferentes tipos de jugadores</p>
       </div>
     </div>
-    <div class="d-flex justify-content-center">
-      <a href="">
-        Proximamente
-      </a>
-    </div>
-  </section>
-
-
-  <!-- end product section -->
-
-
-  <!-- seccion de informacion -->
-  <section class="info_section layout_padding">
-    <div class="container layout_padding-top  layout_padding2-bottom">
-      <div class="logo-box">
-        <a href="index.html">
-          <img src="images/info-logo.png" alt="">
-        </a>
-      </div>
-      <div class="info_items">
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-1">
-              <img src="images/location-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Cucuta, Norte De Santander
-              </p>
-            </div>
+    
+    <div class="row">
+      <!-- Tarjeta 1 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" style="background-color: #d8eef7;">
+          <div class="icon-container">
+            <i class="bi bi-controller"></i>
           </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-3">
-              <img src="images/envelope-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Crown_Study@gmail.com
-              </p>
-            </div>
+          <h3>Juegos Casual</h3>
+          <p>Diseñados para quienes tienen poco tiempo y buscan entretenimiento rápido.</p>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 2 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" style="background-color: #efe4ff;">
+          <div class="icon-container">
+            <i class="bi bi-book-half"></i>
           </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-2">
-              <img src="images/telephone-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                +57 3125108134
-              </p>
-            </div>
+          <h3>Narrativas Inmersivas</h3>
+          <p>Juegos con historias profundas y envolventes para vivir una experiencia única.</p>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 3 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" style="background-color: #d8eef7;">
+          <div class="icon-container">
+            <i class="bi bi-arrow-clockwise"></i>
           </div>
-        </a>
-
+          <h3>Remakes Modernos</h3>
+          <p>Renovamos tus clásicos favoritos con tecnología y diseño actual.</p>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 4 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" style="background-color: #d6f7ea;">
+          <div class="icon-container">
+            <i class="bi bi-gift"></i>
+          </div>
+          <h3>Servicio de Fidelidad</h3>
+          <p>Recompensamos a nuestros jugadores más leales con beneficios exclusivos.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- end product section -->
 
-  <!-- Fin de seccion de informacion -->
+<style>
+  /* Estilos específicos para la sección de productos */
+  .product_section {
+    padding: 60px 0;
+  }
+  
+  .product_section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .product_section p {
+    color: #e0e0e0;
+  }
+  
+  .product-card {
+    border-radius: 8px;
+    padding: 25px 15px;
+    text-align: center;
+    height: 100%;
+    color: #333;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon-container {
+    margin-bottom: 15px;
+  }
+  
+  .icon-container i {
+    font-size: 3.5rem;
+    color: #3c6cff;
+  }
+  
+  .product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .product-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @media (max-width: 991px) {
+    .row {
+      justify-content: center;
+    }
+  }
+  </style>
 
-  <!-- sección de pie de página -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2024 Todos los derechos a 
-      <a>Crown Study</a>
-    </p>
-  </section>
-  <!-- Fin de la sección de pie de página -->
+  <!-- seccion de informacion --><section class="info_section">
+  <div class="container text-center">
+    <div class="logo-box">
+      <img src="../images/logo.png" alt="Logo">
+    </div>
 
+    <div class="info_container">
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div class="detail-box">
+          Cúcuta, Colombia
+        </div>
+      </div>
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-envelope-fill"></i>
+        </div>
+        <div class="detail-box">
+          contacto@crownstudy.com
+        </div>
+      </div>
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="detail-box">
+          312 510 8134
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_note shadow-footer mt-4">
+      Desarrollado por Crown Study © 2025. Todos los derechos reservados.
+    </div>
+  </div>
+</section>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
-
 </html>

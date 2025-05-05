@@ -76,104 +76,91 @@
   <!-- end hero area -->
 
 
-  <!-- Seccion de nosotros -->
   <section class="about_section layout_padding">
-    <div class="about_container">
-      <div class="container">
+    <div class="container">
+      <h2 class="custom_heading">Nosotros</h2>
+  
+      <div class="content_flex">
+        <!-- Misión -->
         <div class="detail">
-          <h2 class="custom_heading">
-            Nosotros
-          </h2>
-          <h3>Misión: </h3>
+          <h3>Misión:</h3>
           <p>
-            En Crown Study, nuestra razón de ser es desarrollar videojuegos
-            independientes de alta calidad que cautiven a los jugadores. Nos
-            dedicamos a crear experiencias de juego únicas y emocionantes,
-            dirigidas a una audiencia apasionada por el entretenimiento digital.
+            En Crown Study, nuestra razón de ser es desarrollar videojuegos independientes de alta calidad que cautiven a los jugadores. Nos dedicamos a crear experiencias de juego únicas y emocionantes, dirigidas a una audiencia apasionada por el entretenimiento digital.
           </p>
-          <div>
-            <a href="contact.html">
-              Contactar
-            </a>
-          </div>
+          <img src="images/mision.png" alt="Misión" class="img_section" />
         </div>
-        <div class="detail-2">
-          <h3>Visión: </h3>
+  
+        <!-- Visión -->
+        <div class="detail">
+          <h3>Visión:</h3>
           <p>
-            Para el año 2027, nos proyectamos como desarrolladores de videojuegos,
-            reconocidos por nuestra excelencia en la creación de experiencias únicas y
-            envolventes que cautivan a los jugadores. Nos destacaremos por nuestra capacidad
-            para adaptarnos a las demandas del mercado y establecer un nuevo estándar de 
-            excelencia en el desarrollo de videojuegos independientes. Con sede en Cúcuta, Norte de Santander.
+            Para el año 2027, nos proyectamos como desarrolladores de videojuegos, reconocidos por nuestra excelencia en la creación de experiencias únicas y envolventes que cautivan a los jugadores. Nos destacaremos por nuestra capacidad para adaptarnos a las demandas del mercado y establecer un nuevo estándar de excelencia en el desarrollo de videojuegos independientes. Con sede en Cúcuta, Norte de Santander.
           </p>
+          <img src="images/vision.png" alt="Visión" class="img_section" />
         </div>
+      </div>
+  
+      <div class="contact_button_container">
+        <a href="contact.html" class="custom-btn">Contactar</a>
       </div>
     </div>
   </section>
-
-
+  
   <!-- Fin de la seccion nosotros -->
 
-
+  <!-- CHAT BOT -->
+  <div id="chat-container" class="chat-container">
+    <div id="chat-box" class="chat-box"></div>
+    <div class="chat-input-container">
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button id="send-btn">Enviar</button>
+    </div>
+    <div id="suggestions" class="suggestions"></div>
+  </div>
+  <button id="open-chat" class="chat-toggle" onclick="toggleChat()">
+    <img src="images/logo.png" alt="Chat" class="chat-logo">
+  </button>
+  <script src="js/script.js"></script>
+  <!-- CHAT BOT -->
 
   <!-- seccion de informacion -->
-  <section class="info_section layout_padding">
-    <div class="container layout_padding-top  layout_padding2-bottom">
+  <section class="info_section">
+    <div class="container text-center">
       <div class="logo-box">
-        <a href="index.html">
-          <img src="images/info.jpeg" alt="">
-        </a>
+        <img src="../images/logo.png" alt="Logo">
       </div>
-      <div class="info_items">
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-1">
-              <img src="images/location-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Cucuta, Norte De Santander
-              </p>
-            </div>
+  
+      <div class="info_container">
+        <div class="info_item">
+          <div class="icon-box">
+            <i class="bi bi-geo-alt-fill"></i>
           </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-3">
-              <img src="images/envelope-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Crown_Study@gmail.com
-              </p>
-            </div>
+          <div class="detail-box">
+            Cúcuta, Colombia
           </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-2">
-              <img src="images/telephone-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                +57 3125108134
-              </p>
-            </div>
+        </div>
+        <div class="info_item">
+          <div class="icon-box">
+            <i class="bi bi-envelope-fill"></i>
           </div>
-        </a>
-
+          <div class="detail-box">
+            contacto@crownstudy.com
+          </div>
+        </div>
+        <div class="info_item">
+          <div class="icon-box">
+            <i class="bi bi-telephone-fill"></i>
+          </div>
+          <div class="detail-box">
+            312 510 8134
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer_note shadow-footer mt-4">
+        Desarrollado por Crown Study © 2025. Todos los derechos reservados.
       </div>
     </div>
-  </section>
-
-  <!-- Fin de seccion de informacion -->
-
-  <!-- sección de pie de página -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2024 Todos los derechos a 
-      <a>Crown Study</a>
-    </p>
   </section>
   <!-- Fin de la sección de pie de página -->
 

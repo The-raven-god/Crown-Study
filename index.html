@@ -101,7 +101,7 @@
         </h1>
       </div>
       <div class="hero_btn-box">
-        <a href="">
+        <a href="contact.html">
           Contactanos
         </a>
       </div>
@@ -110,363 +110,343 @@
   </div>
   <!-- end hero area -->
 
+<!-- Fundido suave entre secciones -->
+<div class="fade-transition"></div>
 
-  <!-- Nosotros seccion -->
-  <section class="about_section layout_padding">
-    <div class="about_container">
-      <div class="container">
-        <div class="detail">
-          <h2 class="custom_heading">
-            <img src="images/p-1.png" alt="" />
-          </h2>
-          
-          <div>
-            <a href="">
-              Proximamente un juego de pensamiento
-            </a>
+<div id="chat-container" class="chat-container">
+  <div id="chat-box" class="chat-box"></div>
+  <div class="chat-input-container">
+    <input type="text" id="user-input" placeholder="Escribe tu pregunta..." autocomplete="off">
+    <button id="send-btn">Enviar</button>
+  </div>
+  <div id="suggestions" class="suggestions"></div>
+</div>
+<button id="open-chat" class="chat-toggle" onclick="toggleChat()">
+  <img src="images/logo.png" alt="Chat" class="chat-logo">
+</button>
+<script src="js/script.js"></script>
+
+<!-- Food Finder Sección -->
+<section class="game-section">
+  <div class="container text-center">
+    <div class="game-icon-wrapper mx-auto">
+      <img src="images/FoodFinder.png" alt="Icono Food Finder" class="game-icon" />
+    </div>
+
+    <div class="mt-4">
+      <button class="game-button" onclick="openModal()">Food Finder</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="gameModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Food Finder</h3>
+    <p>Un juego de plataformas donde deberás ayudar al personaje a encontrar toda la comida que puedas. Desarrollado por Crown Study.</p>
+  </div>
+</div>
+
+<!-- Estilos -->
+<style>
+.game-section {
+  background: linear-gradient(to bottom, #0f3a4b, #1e88e5);
+  padding: 80px 20px;
+}
+
+
+  .game-icon-wrapper {
+    max-width: 280px;
+    border-radius: 20px;
+    padding: 12px;
+    background: #f2f2f2;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  .game-icon {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .game-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: white;
+  color: #002c47;
+  border: 2px solid #002c47;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.game-button:hover {
+  background-color: #002c47;
+  color: white;
+}
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: left;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: black;
+  }
+</style>
+
+<!-- JS para el modal -->
+<script>
+  function openModal() {
+    document.getElementById("gameModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("gameModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == document.getElementById("gameModal")) {
+      closeModal();
+    }
+  };
+</script>
+
+  <!-- Fin de nosotros seccion -->
+
+
+
+<!-- Creador section -->
+<section class="client_section layout_padding">
+  <div class="d-flex justify-content-center">
+      <h2 class="custom_heading">
+          Creadores
+      </h2>
+  </div>
+  <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="client_container layout_padding">
+                      <div class="creador-card">
+                          <div class="img_container">
+                              <img src="images/creador.png" alt="Santiago">
+                          </div>
+                          <div class="detail_box">
+                              <h5>
+                                  <span>S</span>
+                                  <span>A</span>
+                                  <span>N</span>
+                                  <span>T</span>
+                                  <span>I</span>
+                                  <span>A</span>
+                                  <span>G</span>
+                                  <span>O</span>
+                              </h5>
+                              <p>
+                                  Me destaco como un líder innato en el mundo empresarial, reconocido por mi capacidad para 
+                                  resolver desafíos y mi visión estratégica. Mi profundo conocimiento técnico y mi enfoque 
+                                  orientado al logro me permiten impulsar el crecimiento y la excelencia tanto en mi equipo como 
+                                  en la empresa en su totalidad. Con habilidades sólidas para liderar y motivar, junto con un 
+                                  compromiso inquebrantable con la innovación, soy capaz de liderar proyectos exitosos en un 
+                                  mercado altamente competitivo y en constante evolución.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="client_container layout_padding">
+                      <div class="creador-card">
+                          <div class="img_container">
+                              <img src="images/lisandro.png" alt="Lisandro">
+                          </div>
+                          <div class="detail_box">
+                              <h5>
+                                  <span>L</span>
+                                  <span>I</span>
+                                  <span>S</span>
+                                  <span>A</span>
+                                  <span>N</span>
+                                  <span>D</span>
+                                  <span>R</span>
+                                  <span>O</span>
+                              </h5>
+                              <p>
+                                  Soy un profesional que irradia confianza y deja una impresión duradera. Mi capacidad para 
+                                  resolver problemas y adaptarme a diversas situaciones es mi mayor fortaleza, reflejando un 
+                                  carácter imponente y una determinación inquebrantable. Más allá de mis habilidades técnicas, 
+                                  destaco por mi capacidad para encontrar soluciones creativas a los desafíos empresariales. 
+                                  Mi amabilidad y carisma sirven como un faro para inspirar a mi equipo.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="client_container layout_padding">
+                      <div class="creador-card">
+                          <div class="img_container">
+                              <img src="images/diego.png" alt="Diego">
+                          </div>
+                          <div class="detail_box">
+                              <h5>
+                                  <span>D</span>
+                                  <span>I</span>
+                                  <span>E</span>
+                                  <span>G</span>
+                                  <span>O</span>
+                              </h5>
+                              <p>
+                                  Me identifico como un profesional amigable y comprensivo, comprometido con el éxito de mi 
+                                  equipo y de la empresa en su conjunto. Mi disposición para colaborar y apoyar a mis colegas es 
+                                  una parte fundamental de mi enfoque laboral. Siempre busco soluciones creativas y eficientes 
+                                  para enfrentar los desafíos y alcanzar nuestros objetivos empresariales. Mi capacidad para 
+                                  trabajar en equipo contribuye positivamente al rendimiento.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="client_container layout_padding">
+                      <div class="creador-card">
+                          <div class="img_container">
+                              <img src="images/eliecer.png" alt="Eliecer">
+                          </div>
+                          <div class="detail_box">
+                              <h5>
+                                  <span>E</span>
+                                  <span>L</span>
+                                  <span>I</span>
+                                  <span>E</span>
+                                  <span>C</span>
+                                  <span>E</span>
+                                  <span>R</span>
+                              </h5>
+                              <p>
+                                  Soy una persona flexible y adaptable, mi actitud flexible me permite enfrentar cualquier
+                                  situación con creatividad y mente abierta, buscando soluciones innovadoras. Estoy
+                                  comprometido con mi crecimiento personal y profesional, y estoy emocionado por aplicar
+                                  mis habilidades para hacer una diferencia en el mundo.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="detail-2">
-          <h2 class="custom_heading">
-            <img src="images/p-1.png" alt="" />
-          </h2>
-        </div>
       </div>
-    </div>
-  </section>
-
-
-  <!-- Fin de nosotros seccion -->
-  <!-- Nosotros seccion -->
-  <section class="about_section layout_padding">
-    <div class="about_container">
-      <div class="container">
-        <div class="detail">
-          <h2 class="custom_heading">
-            <img src="images/p-2.jpg" alt="" />
-          </h2>
-          
-          <div>
-            <a href="">
-              Proximamente un juego
-            </a>
-          </div>
-        </div>
-        <div class="detail-2">
-          
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Fin de nosotros seccion -->
-
-  <!-- Nosotros seccion -->
-  <section class="about_section layout_padding">
-    <div class="about_container">
-      <div class="container">
-        
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Fin de nosotros seccion -->
-
-
+  </div>
+</section>
   <!-- Seccion de contacto -->
 
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="col-md-6">
-        <div class="d-flex mb-4 ml-4 ml-md-0">
-          <h2 class="custom_heading text-center">
-            Contactanos
-          </h2>
+<section class="contact_section layout_padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="text-center mb-4">
+          <h2 class="custom_heading">Contáctanos</h2>
         </div>
         <form action="">
-          <div>
-            <input type="text" placeholder="Nombre" />
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" placeholder="Nombre" required />
           </div>
-          <div>
-            <input type="email" placeholder="Email" />
+          <div class="form-group mb-3">
+            <input type="email" class="form-control" placeholder="Email" required />
           </div>
-          <div>
-            <input type="text" placeholder="Numero" />
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" placeholder="Número" />
           </div>
-          <div>
-            <input type="text" class="message-box" placeholder="Mensage" />
+          <div class="form-group mb-4">
+            <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
           </div>
-          <div class="d-flex justify-content-center mt-4 ">
-            <button>
-              Enviar
-            </button>
+          <div class="text-center">
+            <button type="submit" class="custom-btn">Enviar</button>
           </div>
         </form>
       </div>
     </div>
-
-  </section>
+  </div>
+</section>
 
   <!-- Fin de la seccion de contacto -->
 
-  <!-- creador section -->
-  <section class="client_section layout_padding">
-    <div class="d-flex justify-content-center">
-        <h2 class="custom_heading">
-            creadores
-        </h2>
+  <!--INfo -->
+<section class="info_section">
+  <div class="container text-center">
+    <div class="logo-box">
+      <img src="../images/logo.png" alt="Logo">
     </div>
-    <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="client_container layout_padding">
-                        <div class="img_box">
-                            <img src="images/creador.png" alt="">
-                        </div>
 
-                        <div class="detail_box">
-                            <h5>
-                                <span>
-                                    S
-                                </span>
-                                <span>
-                                    A
-                                </span>
-                                <span>
-                                    N
-                                </span>
-                                <span>
-                                    T
-                                </span>
-                                <span>
-                                    I
-                                </span>
-                                <span>
-                                    A
-                                </span>
-                                <span>
-                                    G
-                                </span>
-                                <span>
-                                    O
-                                </span>
-                            </h5>
-                            <p>
-                              Me destaco como un líder innato en el mundo empresarial, reconocido por mi capacidad para 
-                              resolver desafíos y mi visión estratégica. Mi profundo conocimiento técnico y mi enfoque 
-                              orientado al logro me permiten impulsar el crecimiento y la excelencia tanto en mi equipo como 
-                              en la empresa en su totalidad. Con habilidades sólidas para liderar y motivar, junto con un 
-                              compromiso inquebrantable con la innovación, soy capaz de liderar proyectos exitosos en un 
-                              mercado altamente competitivo y en constante evolución. Mi liderazgo inspirador y mi enfoque 
-                              centrado en resultados son pilares fundamentales para alcanzar el éxito empresarial y superar 
-                              las expectativas del mercado.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="client_container layout_padding">
-                        <div class="img_box">
-                            <img src="images/lisandro.png" alt="">
-                        </div>
-
-                        <div class="detail_box">
-                            <h5>
-                                <span>
-                                    L
-                                </span>
-                                <span>
-                                    I
-                                </span>
-                                <span>
-                                    S
-                                </span>
-                                <span>
-                                    A
-                                </span>
-                                <span>
-                                    N
-                                </span>
-                                <span>
-                                    D
-                                </span>
-                                <span>
-                                    R
-                                </span>
-                                <span>
-                                    O
-                                </span>
-                            </h5>
-                            <p>
-                              Soy un profesional que irradia confianza y deja una impresión duradera. Mi capacidad para 
-                              resolver problemas y adaptarme a diversas situaciones es mi mayor fortaleza, reflejando un 
-                              carácter imponente y una determinación inquebrantable. Más allá de mis habilidades técnicas, 
-                              destaco por mi capacidad para encontrar soluciones creativas a los desafíos empresariales. 
-                              Mi amabilidad y carisma sirven como un faro para inspirar a mi equipo , dejando una huella 
-                              positiva en el entorno laboral y promoviendo un ambiente de trabajo colaborativo y productivo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="client_container layout_padding">
-                        <div class="img_box">
-                            <img src="images/jimmer.png" alt="">
-                        </div>
-
-                        <div class="detail_box">
-                            <h5>
-                                <span>
-                                    J
-                                </span>
-                                <span>
-                                    I
-                                </span>
-                                <span>
-                                    M
-                                </span>
-                                <span>
-                                    M
-                                </span>
-                                <span>
-                                    E
-                                </span>
-                                <span>
-                                    R
-                                </span>
-                                <span>
-                                  
-                                </span>
-                                <span>
-                                  
-                                </span>
-                            </h5>
-                            <p>
-                              Me identifico como un profesional amigable y comprensivo, comprometido con el éxito de mi 
-                              equipo y de la empresa en su conjunto. Mi disposición para colaborar y apoyar a mis colegas es 
-                              una parte fundamental de mi enfoque laboral. Siempre busco soluciones creativas y eficientes 
-                              para enfrentar los desafíos y alcanzar nuestros objetivos empresariales. Mi capacidad para 
-                              trabajar en equipo y mantener un ambiente colaborativo contribuye positivamente al rendimiento 
-                              y la cohesión del grupo, promoviendo así el crecimiento y el éxito de la organización.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="client_container layout_padding">
-                        <div class="img_box">
-                            <img src="images/Wilmer.png" alt="">
-                        </div>
-
-                        <div class="detail_box">
-                            <h5>
-                                <span>
-                                  
-                                </span>
-                                <span>
-                                    W
-                                </span>
-                                <span>
-                                    I
-                                </span>
-                                <span>
-                                    L
-                                </span>
-                                <span>
-                                    M
-                                </span>
-                                <span>
-                                    E
-                                </span>
-                                <span>
-                                    R
-                                </span>
-                                <span>
-                                  
-                                </span>
-                            </h5>
-                            <p>
-                                Soy una persona flexible y adaptable,Mi actitud flexible me permite enfrentar cualquier
-                                situación con creatividad y mente abierta, buscando soluciones innovadoras. Estoy
-                                comprometido con mi crecimiento personal y profesional, y estoy emocionado por aplicar
-                                mis habilidades para hacer una diferencia en el mundo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="info_container">
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-geo-alt-fill"></i>
         </div>
-    </div>
-</section>
-
-
-  <!-- end client section -->
-
-  <!-- seccion de informacion -->
-  <section class="info_section layout_padding">
-    <div class="container layout_padding-top  layout_padding2-bottom">
-      <div class="info_items">
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-1">
-              <img src="images/location-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Cucuta, Norte De Santander
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-3">
-              <img src="images/envelope-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Crown_Study@gmail.com
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-2">
-              <img src="images/telephone-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                +57 3125108134
-              </p>
-            </div>
-          </div>
-        </a>
-
+        <div class="detail-box">
+          Cúcuta, Colombia
+        </div>
+      </div>
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-envelope-fill"></i>
+        </div>
+        <div class="detail-box">
+          contacto@crownstudy.com
+        </div>
+      </div>
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="detail-box">
+          312 510 8134
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Fin de seccion de informacion -->
-
-  <!-- sección de pie de página -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2024 Todos los derechos a 
-      <a>Crown Study</a>
-    </p>
-  </section>
-  <!-- Fin de la sección de pie de página -->
-
+    <div class="footer_note shadow-footer mt-4">
+      Desarrollado por Crown Study © 2025. Todos los derechos reservados.
+    </div>
+  </div>
+</section>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>

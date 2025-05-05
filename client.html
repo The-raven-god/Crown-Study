@@ -74,136 +74,140 @@
   </div>
   <!-- end hero area -->
 
-  <!-- Seccion del cliente -->
-  <section class="client_section layout_padding">
-    <div class="d-flex justify-content-center">
-      <h2 class="custom_heading">
-        Testimonios
-      </h2>
+     <!-- CHAT BOT -->
+  <div id="chat-container" class="chat-container">
+    <div id="chat-box" class="chat-box"></div>
+    <div class="chat-input-container">
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button id="send-btn">Enviar</button>
     </div>
-    <div class="container">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="client_container layout_padding">
-              <div class="img_box">
-                <img src="images/client_1.png" alt="">
-              </div>
-
-              <div class="detail_box">
-                <h5>
-                  John Smith
-                </h5>
-                <p>
-                  Me gusta mucho vuestra empresa, especialmente vuestro enfoque en la calidad y la atención al cliente. Siempre me siento valorado como cliente y eso es algo que realmente aprecio.
-                </p>
-              </div>
+    <div id="suggestions" class="suggestions"></div>
+  </div>
+  <button id="open-chat" class="chat-toggle" onclick="toggleChat()">
+    <img src="images/logo.png" alt="Chat" class="chat-logo">
+  </button>
+  <script src="js/script.js"></script>
+  <!-- CHAT BOT -->
+   
+<!-- Seccion de Testimonios (versión más estrecha) -->
+<section class="testimonios_section layout_padding">
+  <div class="d-flex justify-content-center">
+    <h2 class="custom_heading">
+      TESTIMONIOS
+    </h2>
+  </div>
+  <div class="container">
+    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+        <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <!-- Testimonio 1 -->
+        <div class="carousel-item active">
+          <div class="testimonio-card">
+            <div class="img_container">
+              <img src="images/client_1.png" alt="John Smith">
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="client_container layout_padding">
-              <div class="img_box">
-                <img src="images/client_2.png" alt="">
-              </div>
-
-              <div class="detail_box">
-                <h5>
-                  María Rodríguez
-                </h5>
-                <p>
-                  Estoy encantada con el servicio que ofrece vuestra empresa. La rapidez y eficacia con la que solucionáis cualquier problema es impresionante. Sin duda, seguiré confiando en vosotros.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="client_container layout_padding">
-              <div class="img_box">
-                <img src="images/client_3.png" alt="">
-              </div>
-
-              <div class="detail_box">
-                <h5>
-                  Ana López
-                </h5>
-                <p>
-                  Vuestra empresa realmente marca la diferencia. Me encanta cómo os preocupáis por vuestra comunidad y el medio ambiente. Además, vuestros productos son simplemente increíbles. ¡Seguid así!
-                </p>
-              </div>
+            <div class="detail_box">
+              <h5>
+                John Smith
+              </h5>
+              <p>
+                Me gusta mucho vuestra empresa, especialmente vuestro enfoque en la calidad y la atención al cliente. Siempre me siento valorado como cliente y eso es algo que realmente aprecio.
+              </p>
             </div>
           </div>
         </div>
-
+        
+        <!-- Testimonio 2 -->
+        <div class="carousel-item">
+          <div class="testimonio-card">
+            <div class="img_container">
+              <img src="images/client_2.png" alt="María Rodríguez">
+            </div>
+            <div class="detail_box">
+              <h5>
+                María Rodríguez
+              </h5>
+              <p>
+                Estoy encantada con el servicio que ofrece vuestra empresa. La rapidez y eficacia con la que solucionáis cualquier problema es impresionante.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonio 3 -->
+        <div class="carousel-item">
+          <div class="testimonio-card">
+            <div class="img_container">
+              <img src="images/client_3.png" alt="Ana López">
+            </div>
+            <div class="detail_box">
+              <h5>
+                Ana López
+              </h5>
+              <p>
+                Vuestra empresa realmente marca la diferencia. Me encanta cómo os preocupáis por vuestra comunidad y el medio ambiente.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-
+      
+      <!-- Controles del carrusel -->
+      <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
     </div>
-  </section>
-
-  <!-- Fin de la seccion del cliente -->
+  </div>
+</section>
 
   <!-- Seccion de informacion -->
-  <section class="info_section layout_padding">
-    <div class="container layout_padding-top  layout_padding2-bottom">
-      <div class="logo-box">
-        <a href="index.html">
-          <img src="images/info-logo.png" alt="">
-        </a>
-      </div>
-      <div class="info_items">
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-1">
-              <img src="images/location-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Cucuta, Norte De Santander
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-3">
-              <img src="images/envelope-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                Crown_Study@gmail.com
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-2">
-              <img src="images/telephone-white.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                +57 3125108134
-              </p>
-            </div>
-          </div>
-        </a>
+<section class="info_section">
+  <div class="container text-center">
+    <div class="logo-box">
+      <img src="../images/logo.png" alt="Logo">
+    </div>
 
+    <div class="info_container">
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div class="detail-box">
+          Cúcuta, Colombia
+        </div>
+      </div>
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-envelope-fill"></i>
+        </div>
+        <div class="detail-box">
+          contacto@crownstudy.com
+        </div>
+      </div>
+      <div class="info_item">
+        <div class="icon-box">
+          <i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="detail-box">
+          312 510 8134
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Fin de seccion de informacion -->
-
-  <!-- sección de pie de página -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2024 Todos los derechos a 
-      <a>Crown Study</a>
-    </p>
+    <div class="footer_note shadow-footer mt-4">
+      Desarrollado por Crown Study © 2025. Todos los derechos reservados.
+    </div>
+  </div>
+</section>
   </section>
   <!-- Fin de la sección de pie de página -->
 
